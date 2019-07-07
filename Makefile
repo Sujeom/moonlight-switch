@@ -77,13 +77,14 @@ CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++17 $(CXXFLAGS)
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS	:=	-lsdl2 -lsdl2_gfx -lsdl2_ttf -lsdl2_image -lpng -ljpeg -lfreetype \
+LIBS	:=	-lSDL2 -lSDL2_gfx -lSDL2_ttf -lSDL2_image -lpng -ljpeg -lfreetype \
+			-lwebp -lvpx \
 			-lEGL -lglapi -ldrm_nouveau \
-			-lavcodec -lavutil \
+			-lavcodec -lavutil -lavformat -lswscale -lvpx \
 			-lopus \
 			-lssl -lcrypto \
 			-lbz2 -lz -lexpat -lm \
-			-lstdc++ -lnx
+			-lstdc++ -lnx -lswresample
 
 
 #---------------------------------------------------------------------------------
