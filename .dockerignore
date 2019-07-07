@@ -1,0 +1,9 @@
+.git
+.cache
+*.md
+assets
+data
+src
+build
+dist
+LICENSE
